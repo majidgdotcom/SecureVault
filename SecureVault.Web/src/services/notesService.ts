@@ -101,4 +101,5 @@ class NotesService {
   }
 }
 
-export default new NotesService();
+const notesService = new NotesService();
+export default notesService;
