@@ -13,3 +13,22 @@ Thumbs.db
 
 # Logs
 *.log
+
+# .NET secrets — never commit real keys
+# Use `dotnet user-secrets` locally or environment variables in production.
+# Copy appsettings.json and fill in real values; do not commit that copy.
+appsettings.Production.json
+appsettings.Local.json
+secrets.json
+
+# Frontend env files — use .env.example as the template
+SecureVault.Web/.env
+SecureVault.Web/.env.local
+SecureVault.Web/.env.development.local
+SecureVault.Web/.env.test.local
+SecureVault.Web/.env.production.local
+
+# Node
+SecureVault.Web/node_modules/
+SecureVault.Web/build/
+SecureVault.Web/coverage/

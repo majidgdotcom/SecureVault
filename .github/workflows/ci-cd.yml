@@ -12,8 +12,8 @@ on:
       - main
 
 jobs:
-  backend-build:
-    name: Backend Build (.NET 8)
+  backend-build-test:
+    name: Backend Build & Test (.NET 8)
     runs-on: ubuntu-latest
 
     steps:
@@ -30,6 +30,9 @@ jobs:
 
       - name: Build
         run: dotnet build SecureVault.sln --configuration Release --no-restore
+
+      - name: Test
+        run: dotnet test SecureVault.sln --configuration Release --no-build --verbosity normal
 
   frontend-build:
     name: Frontend Build (React)
@@ -53,7 +56,7 @@ jobs:
   backend-security:
     name: Backend Security Scan
     runs-on: ubuntu-latest
-    needs: backend-build
+    needs: backend-build-test
 
     steps:
       - uses: actions/checkout@v4
