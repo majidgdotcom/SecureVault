@@ -5,6 +5,7 @@ using SecureVault.Application.DTOs;
 using SecureVault.Application.Services;
 using SecureVault.Domain.Entities;
 using SecureVault.Domain.Interfaces;
+using Xunit;
 
 namespace SecureVault.Tests;
 

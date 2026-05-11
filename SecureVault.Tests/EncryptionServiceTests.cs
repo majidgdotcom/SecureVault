@@ -1,6 +1,7 @@
 using FluentAssertions;
 using Microsoft.Extensions.Configuration;
 using SecureVault.Infrastructure.Services;
+using Xunit;
 
 namespace SecureVault.Tests;
 
